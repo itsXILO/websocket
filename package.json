@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "node": "^26.5.0",
+    "ws": "^8.21.1"
+  },
+  "name": "websocket-demo",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itsXILO/websocket.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/itsXILO/websocket/issues"
+  },
+  "homepage": "https://github.com/itsXILO/websocket#readme",
+  "devDependencies": {
+    "@types/node": "^26.1.1",
+    "@types/ws": "^8.18.1",
+    "typescript": "^7.0.2"
+  }
+}
