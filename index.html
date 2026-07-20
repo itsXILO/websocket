@@ -38,7 +38,7 @@
 <pre id=""log></pre>
 
 </body>
-
+<script>
 const status = document.getElementById("status");
 const log = document.getElementById("log");
 const input = document.getElementById("message-input");
@@ -63,5 +63,9 @@ socket.addEventListener("close", () => {
   appendLog("[SYSTEM]", "Tunnel Collapsed.");
 });
 
+socket.addEventListener("message", (e) => {
+  appendLog("[SERVER]", e.data);
+});
+</script>
 
 </html>
