@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WebSocket Live Test Rig</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #222;
+      color: #eee;
+    }
+    #log {
+      border: 1px solid #444;
+      padding: 10px;
+      margin-top: 20px;
+      background-color: #111;
+      height: 200px;
+      overflow-y: scroll;
+    }
+    .status-on {
+      color: limegreen;
+    }
+    .status-off {
+      color: crimson;
+    }
+  </style>
+</head>
+<body>
+  <h1>WebSocket Broadcast Console</h1>
+  <p id="status" class="status-off">Connecting...</p>
+  <div id="log"></div>
+</body>
+</html>
