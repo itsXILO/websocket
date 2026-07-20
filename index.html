@@ -39,5 +39,29 @@
 
 </body>
 
+const status = document.getElementById("status");
+const log = document.getElementById("log");
+const input = document.getElementById("message-input");
+
+const socket = new WebSocket("ws://localhost:8080");
+
+const appendLog = (label, message) => {
+  const div = document.createElement("div");
+  div.textContent = `${label}: ${message}`;
+  log.appendChild(div);
+};
+
+socket.addEventListener("open", () => {
+  status.textContent = "CONNECTED";
+  status.className = "status-on";
+  appendLog("[SYSTEM]", "Tunnel Established.");
+});
+
+socket.addEventListener("close", () => {
+  status.textContent = "DISCONNECTED";
+  status.className = "status-off";
+  appendLog("[SYSTEM]", "Tunnel Collapsed.");
+});
+
 
 </html>
