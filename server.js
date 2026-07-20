@@ -14,4 +14,9 @@ wss.on('connection', (socket, request) => {
             if (client.readyState === WebSocket.OPEN) client.send(`Server Broadcast: ${message}`);
         });
     });
+
+    socket.on('error', (err) => {
+  console.error(`Error: ${err.message}: ${ip}`);
+})
+
 });
